@@ -1,0 +1,33 @@
+1. There are primarily two ways to create objects in Java:
+
+Using the new keyword: This is the most common approach. The new keyword allocates memory for a new object on the heap, a part of the Java runtime memory that stores objects. It also calls the object's constructor to initialize the object's state.
+
+2.The new keyword has several crucial uses in Java:
+
+Creating objects: As we saw, it allocates memory and invokes constructors for object creation.
+Creating arrays: You use new to allocate memory for arrays, which act as collections of elements of the same type.
+Creating instances of primitive wrapper classes: While primitive data types like int don't require new, you need new to create objects of their wrapper classes (e.g., Integer).
+
+3.Java offers several types of variables, each with a specific scope and lifetime:
+
+Local variables: These are declared within methods and have scope limited to the method block where they're declared. Memory for local variables is allocated on the stack, another part of the runtime memory for method calls and temporary data. They are destroyed when the method execution finishes.
+
+Instance variables (also called member variables): These are declared within a class but outside any method. They are part of the object's state and exist for as long as the object does. Memory for instance variables is allocated on the heap along with the object itself.
+
+Class variables (also called static variables): These are declared with the static keyword and belong to the class itself, shared by all instances of that class. Memory for class variables is also allocated on the heap, but in a separate class-level area.
+
+4.The key difference lies in scope and memory allocation:
+
+Instance variables:
+Scope: Belong to and are accessible within an object's lifetime.
+Memory: Allocated on the heap with the object.
+Example: String name in the Person class above.
+Local variables:
+Scope: Limited to the method block where they're declared.
+Memory: Allocated on the stack when the method starts, destroyed when the method finishes.
+Example: int a in the exampleMethod function above.
+
+5.Instance variables: Heap
+Local variables: Stack
+
+6.Method overloading is a technique in Java where multiple methods in a class have the same name but different parameter lists (number, types, or order of arguments). Java allows you to call the appropriate overloaded method based on the arguments you provide. This promotes code flexibility and clarity.
